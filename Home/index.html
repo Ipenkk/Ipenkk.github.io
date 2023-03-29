@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenshin Impekz - Step Into a Vast Magical World of Adventure</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- -------------------------------HEADER------------------------------- -->
+    <header>
+        <div class="navBar">
+            <div class="kiri">
+                <div class="headerLogo">
+                    <img src="/assets/GenshinImpact.png" alt="logo">
+                </div>
+                <div class="headerText">
+                    <a href="/Home/index.html" id="home">HOME</a>
+                    <a href="/Maps/maps.html">MAPS</a>
+                    <div class="dropdown">
+                        <button href="#character" class="droptext">CHARACTER</button>
+                        <div class="dropdown-content">
+                            <a href="/CharacterMondstadt/characterMondstadt.html">Mondstadt</a>
+                            <a href="/CharacterLiyue/characterLiyue.html">Liyue</a>
+                            <a href="/CharacterInazuma/characterInazuma.html">Inazuma</a>
+                            <a href="/CharacterSumeru/characterSumeru.html">Sumeru</a>
+                        </div>
+                    </div>
+                    <!-- <a href="#explore">EXPLORE</a> -->
+                    <a href="/About/about.html">ABOUT</a>
+                   
+                </div>
+            </div>
+            <div class="kanan">
+                <a href="/Login/login.html" class="splitLog">Log In</a>
+                <div class="downClass">
+                    <button type="submit" class="splitDown" onclick="openPopup()">Download</button>
+                </div>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdownHamburger open">
+            <a href="/Home/index.html" id="home">HOME</a>
+            <a href="/Maps/maps.html">MAPS</a>
+            <a href="/About/about.html">ABOUT</a>
+            <div class="dropdown">
+                <button href="#character" class="droptext">CHARACTER</button>
+                <div class="dropdown-content">
+                    <a href="/CharacterMondstadt/characterMondstadt.html">Mondstadt</a>
+                    <a href="/CharacterLiyue/characterLiyue.html">Liyue</a>
+                    <a href="/CharacterInazuma/characterInazuma.html">Inazuma</a>
+                    <a href="/CharacterSumeru/characterSumeru.html">Sumeru</a>
+                </div>
+            </div>
+            <a href="/Login/login.html">LOGIN</a>
+        </div>
+            <div class="popup" id="popup">
+                <div class="exit">
+                    <img src="/assets/exit.png" onclick="closePopup()" class="exitImg">
+                </div>
+                <div class="downText">DOWNLOAD</div>
+                <div class="downType">
+                    <div class="qr">
+                        <img src="/assets/qr.png" alt="">
+                    </div>
+                    <div class="down1">
+                        <li>
+                            <a href="https://www.playstation.com/en-id/games/genshin-impact/">
+                                <img src="/assets/PS5.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://sg-public-api.hoyoverse.com/event/download_porter/link/ys_global/genshinimpactpc/default">
+                                <img src="/assets/getWindows.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+
+                    <div class="down2">
+                        <li>
+                            <a href="https://apps.apple.com/app/id1517783697">
+                                <img src="/assets/APPSTORE.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact">
+                                <img src="/assets/GOOGLEPLAY.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+                    <div class="epic">
+                        <a href="https://www.epicgames.com/store/p/genshin-impact">
+                        <img src="/assets/epic.png" alt="">
+                    </div>
+                    </a>
+                </div>
+            </div>
+    </header>
+
+    <div class="page1">
+        <div class="isipage1">
+            <div class="image">
+                <div class="msg">
+                    <h1>
+                        Released on Multiple Platform - Download Now!
+                    </h1>
+                </div>
+                <nav>
+                    <ul class="imageDownload">
+                        <li>
+                            <a href="https://www.playstation.com/en-id/games/genshin-impact/" target="_blank">
+                                <img src="/assets/PS5.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://apps.apple.com/app/id1517783697" target="_blank">
+                                <img src="/assets/APPSTORE.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&pli=1"
+                                target="_blank">
+                                <img src="/assets/GOOGLEPLAY.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://sg-public-api.hoyoverse.com/event/download_porter/link/ys_global/genshinimpactpc/default"
+                                target="_blank">
+                                <img src="/assets/getWINDOWS.png">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="isipage2">
+            <img class="ESRB" src="/assets/ESRB.png">
+        </div>
+        <div class="downClass1">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&referrer=adjust_reftag%3DcY5nG9MQyfOd4%26utm_source%3DWebsites%26utm_campaign%3DHomepage">
+                <button class="splitDown1">Download Now</button>
+            </a>
+        </div>
+        </div>
+        <!-- <img class="bg" src="/assets/mondstastBG.jpg"> -->
+        
+    <!-- ----------------------------------NEWS---------------------------------- -->
+    <div class="news">
+        <div class="newsTitle">
+            <div class="panah">
+                <img id="panahKi" src="/assets/panah.png">
+                <h1>NEWS</h1>
+                <img id="panahKa" src="/assets/panah.png">
+            </div>
+        </div>
+        <!-- isiKotak -->
+        <div class="isiKotak">
+            <!-- image slider start -->
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio button start -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!-- radio buttons end -->
+                    <!-- slide image start -->
+                    <div class="slide first">
+                        <img src="/assets/dehya.webp" alt="dehya">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/viagem.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/dehya2.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/mesir.jpg" alt="">
+                    </div>
+                    <!-- slides image end -->
+                    <!-- automatic navigation start -->
+                    <div class="autoNavigation">
+                        <div class="autoBtn1"></div>
+                        <div class="autoBtn2"></div>
+                        <div class="autoBtn3"></div>
+                        <div class="autoBtn4"></div>
+                    </div>
+                    <!-- automatic navigation end -->
+                </div>
+                <!-- manual navigation start -->
+                <div class="navigationManual">
+                    <label for="radio1" class="manualBtn"></label>
+                    <label for="radio2" class="manualBtn"></label>
+                    <label for="radio3" class="manualBtn"></label>
+                    <label for="radio4" class="manualBtn"></label>
+                </div>
+            </div>
+                <ul class="info-slider">
+                    <li class="judul">
+                        <br>
+                        Latest
+                    </li>
+                    <li class="isi">
+                        “Windblume’s Breath” Version 3.5 Update Details
+                    </li>
+                    <li>
+                        “Windblume’s Breath” Version 3.5 Event Preview - Phase I
+                    </li>
+                    <li>
+                        The Version 3.5 Short Video Event on TikTok
+                    </li>
+                    <li>
+                        Collected Miscellany - "Dehya: Passion of the Burning ...
+                    </li>
+                    <li>
+                        Character Demo - "Dehya: Fiery Lioness" | Genshin Impact
+                    </li>
+                    <li>
+                         
+                    </li>
+                </ul>
+        </div>
+        </div>
+
+        <!------------------------------ NEW CHARACTER ------------------------------>
+        <div class="pageNew">
+            <div class="newUpdate">
+                <div class="descChar">
+                    <img src="/assets/pyro.png">
+                    <h1>NEW UPDATE</h1>
+                </div>
+                <div class="namaChar">
+                    <p>DEHYA</p>
+                </div>
+            </div>
+            <!-- <div class="char-content"> -->
+                <div class="isiPage">
+                    <div class="isiChar">
+                        <h1 class="nama">DEHYA</h1>
+                        <div class="tentangChar">
+                            Dehya is a 5-Star Pyro character who uses a claymore.<br>
+                            A member of "The Eremites," a loosely-organized mercenary organization.<br>
+                            She is brave, powerful, and enjoys an excellent reputation among mercenaries.
+                        </div>
+                        <div class="abilityText">
+                            <p>
+                                ABILITY
+                            </p>
+                        </div>
+                        <div class="ability">
+                            <img src="/assets/sandstorm_assault.png">
+                            <img src="/assets/molten_inferno.png">
+                            <img src="/assets/leonine_bite.png">
+                            <img src="/assets/succor.webp">
+                            <img src="/assets/stalWart.webp">
+                            <img src="/assets/theSunlit.webp">
+                        </div>
+                        <div class="namaAbility">
+                            <p>Sandstorm<br>Assault</p>
+                            <p>Molten<br>Inferno</p>
+                            <p id="leon">Leonine<br>Bite</p>
+                            <p>Unstinting<br>Succor</p>
+                            <p id="stal">Stalwart<br>and True</p>
+                            <p>The Sunlit<br>Way</p>
+                        </div>
+                        <div class="infoDehya">
+                            <iframe width="280" height="200" src="https://www.youtube.com/embed/je3XXTBWJY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <img src="/assets/beaconClay.avif">
+                        </div>
+                    </div>
+                    <div class="dehya">
+                        <img src="/assets/dehyapng.png">
+                    </div>
+                </div>
+            <!-- </div> -->
+    
+        </div>
+
+        <!-- CHARACTER MAP -->
+        <div class="village-cover" id="village-map">
+            <a href="/CharacterMondstadt/characterMondstadt.html">
+                <div class="HoverMondstadt">
+                    <img id="star" src="/assets/Star 1.png">
+                    Mondstadt
+                    <img id="line" src="/assets/line.png">
+                </div>
+            </a>
+            <a href="/CharacterLiyue/characterLiyue.html">
+                <div class="HoverLiyue">
+                    <img id="star" src="/assets/Star 1.png">
+                    Liyue
+                    <img id="line" src="/assets/line.png">
+                </div>
+            </a>
+            <a href="/CharacterInazuma/characterInazuma.html">
+                <div class="HoverInazuma">
+                    <img id="star" src="/assets/Star 1.png">
+                    Inazuma   
+                    <img id="line" src="/assets/line.png">
+                    <!-- <img id="chara" src="/assets/raiden.png"> -->
+                </div>
+            </a>
+            <a href="/CharacterSumeru/characterSumeru.html">
+                <div class="HoverSumeru">
+                    <img id="star" src="/assets/Star 1.png">
+                    Sumeru   
+                    <img id="line" src="/assets/line.png">
+                </div>
+            </a>
+        </div>
+
+        <!-- FOOTER -->
+        <script src="https://kit.fontawesome.com/41d7b5ca92.js" crossorigin="anonymous"></script>
+    <footer>
+        <div class="footer-content">
+            <div class="row">
+                <ul class="socials">
+                    <a href="https://www.facebook.com/Genshinimpact/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/GenshinImpact" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/c/GenshinImpact" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/genshinimpact/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://discord.com/invite/genshinimpact" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                </ul>
+            </div>
+
+            
+            <div>
+                <img src = "/assets/GenshinImpact.png" alt="" class="type1">
+            </div>
+
+            <div>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-items"><a href="https://genshin.hoyoverse.com/en/company/privacy" target="_blank">Privacy Policy</a></li>
+                        <li class="quick-items"><a href="https://genshin.hoyoverse.com/en/company/terms" target="_blank">Terms of Service</a></li>
+                        <li class="quick-items"><a href="https://www.hoyoverse.com/en-us/about-us?utm_source=genshin&utm_medium=footer" target="_blank">About Us</a></li>
+                        <li class="quick-items"><a href="genshin_cs@hoyoverse.com" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="type2">
+                <img src = "/assets/ESRB.png" alt="">
+            </div>
+                
+            <div>
+                <div class="content">
+                    "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                </div>
+            </div>
+
+            <div>
+                <div class="content2">
+                    Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. 
+                </div>
+            </div>
+
+            <div>
+                <div class="content3">
+                    All other trademarks are the property of their respective owners."
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <img src = "/assets/hoyoverse.png" alt="" class="type3">
+        </div>
+
+        <div class="footer-bottom">
+            Copyright &copy; COGNOSPHERE. All Rights Reserved.
+        </div>
+    
+    </footer>
+
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function () {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1;
+                }
+
+            }, 5000)
+        </script>
+        <script>
+            let popup = document.getElementById("popup");
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }
+        </script>
+        <script src="/navBar.js"></script>
+</body>
+</head>
+
+</html>

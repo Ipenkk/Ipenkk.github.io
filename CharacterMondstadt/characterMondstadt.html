@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenshin Impekz - Step Into a Vast Magical World of Adventure</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="styleMondstadt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- -------------------------------HEADER------------------------------- -->
+    <header>
+        <div class="navBar">
+            <div class="kiri">
+                <div class="headerLogo">
+                    <img src="/assets/GenshinImpact.png" alt="logo">
+                </div>
+                <div class="headerText">
+                    <a href="/Home/index.html" id="home">HOME</a>
+                    <a href="/Maps/maps.html">MAPS</a>
+                    <div class="dropdown">
+                        <button href="#character" class="droptext">CHARACTER</button>
+                        <div class="dropdown-content">
+                            <a href="/CharacterMondstadt/characterMondstadt.html">Mondstadt</a>
+                            <a href="/CharacterLiyue/characterLiyue.html">Liyue</a>
+                            <a href="/CharacterInazuma/characterInazuma.html">Inazuma</a>
+                            <a href="/CharacterSumeru/characterSumeru.html">Sumeru</a>
+                        </div>
+                    </div>
+                    <!-- <a href="#explore">EXPLORE</a> -->
+                    <a href="/About/about.html">ABOUT</a>
+                   
+                </div>
+            </div>
+            <div class="kanan">
+                <a href="/Login/login.html" class="splitLog">Log In</a>
+                <div class="downClass">
+                    <button type="submit" class="splitDown" onclick="openPopup()">Download</button>
+                </div>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdownHamburger open">
+            <a href="/Home/index.html" id="home">HOME</a>
+            <a href="/Maps/maps.html">MAPS</a>
+            <a href="/About/about.html">ABOUT</a>
+            <div class="dropdown">
+                <button href="#character" class="droptext">CHARACTER</button>
+                <div class="dropdown-content">
+                    <a href="/CharacterMondstadt/characterMondstadt.html">Mondstadt</a>
+                    <a href="/CharacterLiyue/characterLiyue.html">Liyue</a>
+                    <a href="/CharacterInazuma/characterInazuma.html">Inazuma</a>
+                    <a href="/CharacterSumeru/characterSumeru.html">Sumeru</a>
+                </div>
+            </div>
+            <a href="/Login/login.html">LOGIN</a>
+        </div>
+            <div class="popup" id="popup">
+                <div class="exit">
+                    <img src="/assets/exit.png" onclick="closePopup()" class="exitImg">
+                </div>
+                <div class="downText">DOWNLOAD</div>
+                <div class="downType">
+                    <div class="qr">
+                        <img src="/assets/qr.png" alt="">
+                    </div>
+                    <div class="down1">
+                        <li>
+                            <a href="https://www.playstation.com/en-id/games/genshin-impact/">
+                                <img src="/assets/PS5.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://sg-public-api.hoyoverse.com/event/download_porter/link/ys_global/genshinimpactpc/default">
+                                <img src="/assets/getWindows.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+
+                    <div class="down2">
+                        <li>
+                            <a href="https://apps.apple.com/app/id1517783697">
+                                <img src="/assets/APPSTORE.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact">
+                                <img src="/assets/GOOGLEPLAY.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+                    <div class="epic">
+                        <a href="https://www.epicgames.com/store/p/genshin-impact">
+                        <img src="/assets/epic.png" alt="">
+                    </div>
+                    </a>
+                </div>
+            </div>
+    </header>
+    
+    <!-- -------------------- CHARACTER ---------------------->
+    <div class="content">
+        <section class="one">
+            <div class="gambar">
+                 <img src="/assets/anemo.png" alt ="top" height="180" width = "190"> 
+            </div>
+        
+            <div class="text"><h1>JEAN</h1></div>
+            <div class="text-con">
+                <p>Jean had taken precautions long before the onset of 
+                    Stormterror's assault, and she will guard Mondstadt
+                    with her life as always
+                </p>
+            </div>
+        
+            <br/>
+            <div class="text1">
+                <p class="gmb">Attack</p> 
+                <img id="sizeGmb" src="/assets/attakJe.png">
+            </div> 
+        
+            <div class="text1">
+                <p class="gmb">Defense</p> 
+                <img id="sizeGmb" src="/assets/defJe.png">
+            </div> 
+        
+            <div class="text1">
+                <p class="gmb">Mobility</p> 
+                <img id="sizeGmb" src="/assets/mobJe.png">
+            </div> 
+        
+            <div class="text1">
+                <p class="gmb">Utility</p> 
+                <img id="sizeGmb" src="/assets/utiJe.png">
+            </div> 
+            <br/>
+        
+            <br/>
+            <br/>
+            <div class="text-empty">
+                <P>Base Skills</P>
+            </div>
+        
+            <div class="element">
+                <img src="/assets/elemenJean.png" alt="top" height="100" width="350">
+            </div>
+        
+            <div class="icon">
+                <img src="/assets/jean.png" alt ="top" height="820" width = "690">
+            </div>
+        
+            </section>
+    
+    </section>
+
+    <section class="two">
+        <div class="gambar-rig">
+             <img src="/assets/pyro.png" alt ="top" height="180" width = "200"> 
+        </div>
+
+        <div class="text2"><h1>DILUC</h1></div>
+
+        <div class="text-right" alt="top">
+            <p>As the wealthiest gentleman in Mondstadt, the ever-
+                dapper Diluc always presents himself as the epitome of perfection.
+            </p>
+        </div>
+    
+        <br/>
+        <div class="text1">
+            <p class="gmb1" >Attack</p> 
+            <img id="sizeGmb" src="/assets/attackDi.png">
+        </div>
+
+        <div class="text1">
+            <p class="gmb1">Defense</p> 
+            <img id="sizeGmb" src="/assets/defDi.png">
+        </div> 
+    
+        <div class="text1">
+            <p class="gmb1">Mobility</p> 
+            <img id="sizeGmb" src="/assets/mobDi.png">
+        </div> 
+    
+        <div class="text1">
+            <p class="gmb1">Utility</p> 
+            <img id="sizeGmb" src="/assets/utiDi.png">
+        </div> 
+        <br/>
+     
+        <br/>
+        <br/>
+        <br/>
+        <div class="text-empty1">
+            <P>Base Skills</P>
+        </div>
+     
+        <div class="icon-left">
+            <img src="/assets/diluc.png" alt ="top" height="824" width = "600">
+        </div>
+        <div class="element-right">
+            <img src="/assets/elemenDiluc.png" alt="top" height="105" width="263">
+        </div> 
+    
+        </section>
+        <section class="three">
+            <script src="https://kit.fontawesome.com/41d7b5ca92.js" crossorigin="anonymous"></script>
+            <footer>
+                <div class="footer-content">
+                    <div class="row">
+                        <ul class="socials">
+                            <a href="https://www.facebook.com/Genshinimpact/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/GenshinImpact" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/c/GenshinImpact" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/genshinimpact/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://discord.com/invite/genshinimpact" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        </ul>
+                    </div>
+        
+                    
+                    <div>
+                        <img src = "/assets/GenshinImpact.png" alt="" class="type1">
+                    </div>
+        
+                    <div>
+                        <div class="quick-links">
+                            <ul>
+                                <li class="quick-items"><a href="https://genshin.hoyoverse.com/en/company/privacy" target="_blank">Privacy Policy</a></li>
+                                <li class="quick-items"><a href="https://genshin.hoyoverse.com/en/company/terms" target="_blank">Terms of Service</a></li>
+                                <li class="quick-items"><a href="https://www.hoyoverse.com/en-us/about-us?utm_source=genshin&utm_medium=footer" target="_blank">About Us</a></li>
+                                <li class="quick-items"><a href="genshin_cs@hoyoverse.com" target="_blank">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="type2">
+                        <img src = "/assets/ESRB.png" alt="">
+                    </div>
+                        
+                    <div>
+                        <div class="content1">
+                            "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                        </div>
+                    </div>
+        
+                    <div>
+                        <div class="content2">
+                            Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. 
+                        </div>
+                    </div>
+        
+                    <div>
+                        <div class="content3">
+                            All other trademarks are the property of their respective owners."
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div>
+                    <img src = "/assets/hoyoverse.png" alt="" class="type3">
+                </div>
+        
+                <div class="footer-bottom">
+                    Copyright &copy; COGNOSPHERE. All Rights Reserved.
+                </div>
+            </footer>
+        </section>
+</div>
+<script>
+    let popup = document.getElementById("popup");
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+</script>   
+<script src="/navBar.js"></script>
+</body>
+</html>

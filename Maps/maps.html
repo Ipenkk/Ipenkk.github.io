@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenshin Impekz - Step Into a Vast Magical World of Adventure</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="styleMaps.css">
+
+<body>
+    <!-- -------------------------------HEADER------------------------------- -->
+    <header>
+        <div class="navBar">
+            <div class="kiri">
+                <div class="headerLogo">
+                    <img src="/assets/GenshinImpact.png" alt="logo">
+                </div>
+                <div class="headerText">
+                    <a href="/Home/index.html" id="home">HOME</a>
+                    <a href="/Maps/maps.html">MAPS</a>
+                    <div class="dropdown">
+                        <button href="#character" class="droptext">CHARACTER</button>
+                        <div class="dropdown-content">
+                            <a href="/CharacterMondstadt/characterMondstadt.html">Mondstadt</a>
+                            <a href="/CharacterLiyue/characterLiyue.html">Liyue</a>
+                            <a href="/CharacterInazuma/characterInazuma.html">Inazuma</a>
+                            <a href="/CharacterSumeru/characterSumeru.html">Sumeru</a>
+                        </div>
+                    </div>
+                    <!-- <a href="#explore">EXPLORE</a> -->
+                    <a href="/About/about.html">ABOUT</a>
+                   
+                </div>
+            </div>
+            <div class="kanan">
+                <a href="/Login/login.html" class="splitLog">Log In</a>
+                <div class="downClass">
+                    <button type="submit" class="splitDown" onclick="openPopup()">Download</button>
+                </div>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdownHamburger open">
+            <a href="/Home/index.html" id="home">HOME</a>
+            <a href="/Maps/maps.html">MAPS</a>
+            <a href="/About/about.html">ABOUT</a>
+            <div class="dropdown">
+                <button href="#character" class="droptext">CHARACTER</button>
+                <div class="dropdown-content">
+                    <a href="/CharacterMondstadt/characterMondstadt.html">Mondstadt</a>
+                    <a href="/CharacterLiyue/characterLiyue.html">Liyue</a>
+                    <a href="/CharacterInazuma/characterInazuma.html">Inazuma</a>
+                    <a href="/CharacterSumeru/characterSumeru.html">Sumeru</a>
+                </div>
+            </div>
+            <a href="/Login/login.html">LOGIN</a>
+        </div>
+            <div class="popup" id="popup">
+                <div class="exit">
+                    <img src="/assets/exit.png" onclick="closePopup()" class="exitImg">
+                </div>
+                <div class="downText">DOWNLOAD</div>
+                <div class="downType">
+                    <div class="qr">
+                        <img src="/assets/qr.png" alt="">
+                    </div>
+                    <div class="down1">
+                        <li>
+                            <a href="https://www.playstation.com/en-id/games/genshin-impact/">
+                                <img src="/assets/PS5.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://sg-public-api.hoyoverse.com/event/download_porter/link/ys_global/genshinimpactpc/default">
+                                <img src="/assets/getWindows.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+
+                    <div class="down2">
+                        <li>
+                            <a href="https://apps.apple.com/app/id1517783697">
+                                <img src="/assets/APPSTORE.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact">
+                                <img src="/assets/GOOGLEPLAY.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+                    <div class="epic">
+                        <a href="https://www.epicgames.com/store/p/genshin-impact">
+                        <img src="/assets/epic.png" alt="">
+                    </div>
+                    </a>
+                </div>
+            </div>
+    </header>
+    <!-- -----------------------MAPS----------------------- -->
+    <div class="maps">
+        <div class="teyvat">
+            <div class="mapsDetailTeyvat">
+                <!-- <div class="temp-maps"></div> -->
+                <div class="tampung-h1">
+                    <h1 class="mapsName">TEYVAT</h1>
+                </div>
+                <img class="garis" src="/assets/arrowTEYVAT.png">
+                <div class="temp-p">
+                    <p>
+                        You have arrived in Teyvat — a fantasy world where the seven elements flow and converge.
+                        <br>In the distant past, the Archons granted mortals unique elemental abilities. With the help
+                        of such powers,<br>
+                        people formed a bountiful homeland out of the wilderness.
+                        However, 500 years ago, the collapse of an <br>ancient civilization turned the universe upside
+                        down...
+                        <br>Though the calamity the world suffered has ceased, peace has yet to be restored.
+                    </p>
+                </div>
+                <div class="temp-a">
+                    <div class="temp-a-bg">
+                        <a href="https://genshin.hoyoverse.com/en/town" target="_blank">
+
+                            <!-- <p class="checkOut"> -->
+                            Check out the Teyvat Travel Highlights
+                            <!-- </p> -->
+                        </a>
+                    </div>
+                </div>
+                <!-- <img class="mapsBG1" src="/assets/teyvat.png" alt="TEYVAT"> -->
+                <div class="segitiga">
+                    <div class="temp-segitiga">
+                            <a href="#monpage">
+                                    <img src="/assets/teyvatSegitiga1.png" alt="">
+                                </div>
+                            </a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="mondstadt" id="monpage">
+            <div class="mapsDetail">
+                <img src="/assets/mondstadtLOGO.png" alt="" class="logoMaps">
+                <div class="garisNama">
+                    <img id="garisKi" src="/assets/panah.png">
+                    <h1 class="mapsName">Mondstadt</h1>
+                    <img id="garisKa" src="/assets/panah.png">
+                </div>
+
+                <div class="mapsDesc">
+                    <p>
+                        A city of freedom that lies in the northeast of Teyvat.<br>
+                        From amongst mountains and wide-open plains, carefree breezes carry the scent of dandelions<br>
+                        — a gift from the Anemo God, Barbatos — across Cider Lake to Mondstadt, which sits on an<br>
+                        island in the middle of the lake.
+                    </p>
+                </div>
+                <!-- <img class="mapsBG" src="/assets/mondstadtMAP.jpg" alt="MONDSTADT"> -->
+                <div class="segitiga">
+                    <div class="temp-segitiga">
+                            <a href="#lipage">
+                                    <img src="/assets/teyvatSegitiga1.png" alt="">
+                                </div>
+                            </a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="liyue" id="lipage">
+            <div class="mapsDetail">
+                <img src="/assets/liyueLogo.png" alt="" class="logoMaps">
+                <div class="garisNama">
+                    <img id="garisKi" src="/assets/panah.png">
+                    <h1 class="mapsName">Liyue</h1>
+                    <img id="garisKa" src="/assets/panah.png">
+                </div>
+
+                <div class="mapsDesc">
+                    <p>
+                        A bountiful harbor that lies in the east of Teyvat.<br>
+                        Mountains stand tall and proud alongside the stone forest, that together with the open
+                        plains<br>
+                        and lively rivers make up Liyue's bountiful landscape, which shows its unique beauty through<br>
+                        each of the four seasons. Just how many gifts from the Geo God lie in wait amongst the rocks<br>
+                        of Liyue's mountains?
+                    </p>
+                </div>
+                <!-- <img class="mapsBG" src="/assets/liyueMAPS.jpg" alt="LIYUE"> -->
+                <div class="segitiga">
+                    <div class="temp-segitiga">
+                            <a href="#inapage">
+                                    <img src="/assets/teyvatSegitiga1.png" alt="">
+                                </div>
+                            </a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="inazuma" id="inapage">
+            <div class="mapsDetail">
+                <img src="/assets/inazumaLogo.png" alt="" class="logoMaps">
+                <div class="garisNama">
+                    <img id="garisKi" src="/assets/panah.png">
+                    <h1 class="mapsName">Inazuma</h1>
+                    <img id="garisKa" src="/assets/panah.png">
+                </div>
+                <div class="mapsDesc">
+                    <p>
+                        An Isolated Archipelago Far East of Teyvat<br>
+                        Overcome endless thunderstorms and set foot on the islands of red maple and cherry blossoms.<br>
+                        On winding shores and towering cliffs, and in forests and mountains full of secrets, witness
+                        the<br>
+                        Eternity pursued by Her Excellency, the Almighty Narukami Ogosho.
+                    </p>
+                </div>
+                <!-- <img class="mapsBG" src="/assets/inazumaMAPS.jpg" alt=""> -->
+                <div class="segitiga">
+                    <div class="temp-segitiga">
+                            <a href="#sumpage">
+                                    <img src="/assets/teyvatSegitiga1.png" alt="">
+                                </div>
+                            </a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="sumeru" id="sumpage">
+            <div class="mapsDetail">
+                <img src="/assets/sumeruLogo.png" alt="" class="logoMaps">
+                <div class="garisNama">
+                    <img id="garisKi" src="/assets/panah.png">
+                    <h1 class="mapsName">Sumeru</h1>
+                    <img id="garisKa" src="/assets/panah.png">
+                </div>
+
+                <div class="mapsDesc">
+                    <p>
+                        The city of scholars located in the west-central part of Teyvat.<br>
+                        A fantastical nation of both lush rainforest and barren desert, where countless fruits of
+                        wisdom<br>
+                        grow and are buried. Whether Travelers travel from afar through the<br>
+                        academy city or delve deep into the desert to discover the historical ruins of the red desert,
+                        a<br>
+                        wealth of valuable knowledge awaits them here.<br>
+                    </p>
+                </div>
+                <!-- <img class="mapsBG" src="/assets/sumeruMAPS.jpg" alt=""> -->
+                <div class="segitiga">
+                    <div class="temp-segitiga">
+                            <a href="#footpage">
+                                    <img src="/assets/teyvatSegitiga1.png" alt="">
+                                </div>
+                            </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <script src="https://kit.fontawesome.com/41d7b5ca92.js" crossorigin="anonymous"></script>
+    <footer>
+        <div class="footer-content" id="footpage">
+            <div class="row">
+                <ul class="socials">
+                    <a href="https://www.facebook.com/Genshinimpact/" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/GenshinImpact" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/c/GenshinImpact" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/genshinimpact/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://discord.com/invite/genshinimpact" target="_blank"><i
+                            class="fa-brands fa-discord"></i></a>
+                </ul>
+            </div>
+
+
+            <div>
+                <img src="/assets/GenshinImpact.png" alt="" class="type1">
+            </div>
+
+            <div>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-items"><a href="https://genshin.hoyoverse.com/en/company/privacy"
+                                target="_blank">Privacy Policy</a></li>
+                        <li class="quick-items"><a href="https://genshin.hoyoverse.com/en/company/terms"
+                                target="_blank">Terms of Service</a></li>
+                        <li class="quick-items"><a
+                                href="https://www.hoyoverse.com/en-us/about-us?utm_source=genshin&utm_medium=footer"
+                                target="_blank">About Us</a></li>
+                        <li class="quick-items"><a href="genshin_cs@hoyoverse.com" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="type2">
+                <img src="/assets/ESRB.png" alt="">
+            </div>
+
+            <div>
+                <div class="content">
+                    "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony
+                    Interactive Entertainment Inc.
+                </div>
+            </div>
+
+            <div>
+                <div class="content2">
+                    Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are
+                    trademarks and/or registered trademarks of Epic Games.
+                </div>
+            </div>
+
+            <div>
+                <div class="content3">
+                    All other trademarks are the property of their respective owners."
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <img src="/assets/hoyoverse.png" alt="" class="type3">
+        </div>
+
+        <div class="footer-bottom">
+            Copyright &copy; COGNOSPHERE. All Rights Reserved.
+        </div>
+
+    </footer>
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+    <script src="/navBar.js"></script>
+</body>
+</head>
+
+</html>

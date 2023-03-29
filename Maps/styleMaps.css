@@ -1,0 +1,1296 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#maps {
+    text-decoration-color: aqua;
+    text-shadow:
+        0 0 3px #00ffbf,
+        0 0 6px #36fbca,
+        0 0 10px #77fddc;
+}
+
+header {
+    z-index: 99999;
+    position: fixed;
+}
+
+.navBar{
+    background-color: black;
+    /* overflow: hidden; */
+    /* position: fixed; */
+    width: 100vw;
+    z-index: 999;
+    background: rgba(17,17,17,0.75);
+    box-shadow: rgb(0 0 0 / 35%);
+    display: flex;
+    flex-direction: row;
+}
+
+.kiri{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+}
+
+.kanan{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    text-align: right;
+    align-items: center;
+    justify-content: right;
+    margin-right: 2%;
+}
+
+
+.navBar a{
+    font-family: Tahoma,Arial, Helvetica, sans-serif;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navBar a:hover{
+    text-decoration-color: aqua;
+    text-shadow: 
+    0 0 3px #00ffbf,
+    0 0 6px #36fbca,
+    0 0 10px #77fddc;
+}
+
+.headerLogo img{
+    /* width: 150px; */
+    width: 70%;
+    /* border: solid red; */
+    margin-left: 30%;
+}
+
+
+.splitDown{
+    font-family: Tahoma,Arial, Helvetica, sans-serif;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5%;
+    /* margin-top: -50px; */
+    /* margin-left: 50px; */
+    background-color: orange;
+}
+
+.downClass1 .splitDown1{
+    display: none;
+    font-family: Tahoma,Arial, Helvetica, sans-serif;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5%;
+    background-color: orange;
+    margin-top: 300%;
+}
+
+/* dropdown */
+.droptext{
+    background-color: inherit;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 0;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    /* overflow: hidden; */
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.navBar .hamburger{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdownHamburger{
+    display: none;
+    position: absolute;
+    width: 40%;
+    height: 0;
+    background-color: black;
+    background: rgba(17,17,17,0.50);
+    box-shadow: rgb(0 0 0 / 35%);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    transition: height .2s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.dropdownHamburger.open{
+    height: 240px;
+}
+
+.dropdownHamburger a{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .droptext {
+    text-decoration-color: aqua;
+    text-shadow:
+        0 0 3px #00ffbf,
+        0 0 6px #36fbca,
+        0 0 10px #77fddc;
+}
+
+.downClass:hover .splitDown {
+    text-decoration-color: aqua;
+    text-shadow:
+        0 0 3px #00ffbf,
+        0 0 6px #36fbca,
+        0 0 10px #77fddc;
+}
+
+.downClass1:hover .splitDown1 {
+    text-decoration-color: aqua;
+    text-shadow:
+        0 0 3px #00ffbf,
+        0 0 6px #36fbca,
+        0 0 10px #77fddc;
+}
+
+.popup {
+    width: 900px;
+    height: 350px;
+    position: fixed;
+    top: 0;
+    margin-top: -13%;
+    left: 21%;
+    z-index: 1;
+    /* transform: translate(-50%,-50%) scale(0.1); */
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: tranform 0.4s, top 0.4s;
+    background-image: url(/assets/download.png);
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: 900px 350px;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 55%;
+    /* transform: translate(-50%,-50%) scale(1); */
+}
+
+.popup img {
+    width: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.exit img {
+    position: absolute;
+    width: 4%;
+    margin-left: 51%;
+    margin-top: 0.5%;
+}
+
+.downText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+    font-weight: 20px;
+    color: rgb(48, 48, 48);
+    text-shadow:
+        0 0 1px #ffffff,
+        0 0 5px #d5d5d500;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.downType {
+    width: 80%;
+    margin: 15vh 0 10vh 6vh;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.qr {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 2vw;
+}
+
+.qr img {
+    height: 150px;
+    width: auto;
+}
+
+.down1 {
+    padding: 0 2vw 0 0;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.down1 li {
+    width: fit-content;
+}
+
+.down1 li a img {
+    width: 150px;
+}
+
+.down2 {
+    padding: 0 2vw 0 0;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.down2 li {
+    width: fit-content;
+}
+
+.down2 li a img {
+    width: 150px;
+}
+
+.epic {
+    margin-top: 8vh;
+    margin-left: -1vw;
+    width: fit-content;
+}
+
+.epic img {
+    height: 40px;
+    width: auto;
+}
+
+/* MAPS */
+.teyvat {
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/teyvat.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+}
+
+.mapsDetailTeyvat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tampung-h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tampung-h1 h1 {
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: white;
+    font-size: 65px;
+    text-shadow: 0 0 0.17rem rgba(110, 159, 193, 0.24),
+        0 0 0.17rem rgba(110, 159, 193, 0.36);
+}
+
+.garis {
+    width: 50vh;
+}
+
+.temp-p {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.8;
+    font-size: 15px;
+    text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.temp-p p {
+    width: 50%;
+    text-align: center;
+}
+
+.temp-a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.temp-a-bg {
+    margin-top: 1%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.temp-a-bg a {
+    width: 28%;
+    color: white;
+    text-decoration: none;
+    background: url(/assets/checkIt.png) center no-repeat;
+}
+
+.segitiga {
+    width: 80%;
+    position: relative;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mondstadt .segitiga {
+    width: 80%;
+    position: relative;
+    top: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liyue .segitiga{
+    width: 80%;
+    position: relative;
+    top: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inazuma .segitiga{
+    width: 80%;
+    position: relative;
+    top: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sumeru .segitiga{
+    width: 80%;
+    position: relative;
+    top: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapsBG {
+    filter: contrast(-50);
+    filter: brightness(60%);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.mondstadt {
+    background-image: url(/assets/mondstadtMAP.jpg);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.mapsDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoMaps {
+    line-height: 120px;
+    width: 85px;
+    margin-top: 150px;
+}
+
+.garisNama {
+    display: flex;
+    align-items: center;
+    margin-right: 35%;
+    margin-left: 530px;
+}
+
+.mapsDetail h1 {
+    font-weight: 400;
+    display: flex;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+    overflow: hidden;
+}
+
+#garisKi {
+    float: left;
+    width: auto;
+    margin-right: 30px;
+}
+
+#garisKa {
+    float: right;
+    width: auto;
+    transform: scale(-1, -1);
+    margin-left: 30px;
+}
+
+.mapsDesc {
+    position: absolute;
+    color: white;
+    text-align: center;
+    margin-top: 300px;
+    line-height: 1.8;
+    font-size: 14px;
+    text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.liyue {
+    /* margin-top: 29%; */
+    background-image: url(/assets/liyueMAPS.jpg);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+}
+
+.inazuma {
+    /* margin-top: 29%; */
+    background-image: url(/assets/inazumaMAPS.jpg);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+}
+
+.sumeru {
+    /* margin-top: 29%; */
+    background-image: url(/assets/sumeruMAPS.jpg);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+}
+
+/* FOOTER */
+footer {
+    position: relative;
+    /* margin-top: 29%; */
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 0.5px;
+    color: rgb(170, 164, 164);
+}
+
+
+.footer-content a {
+    padding: 5px;
+}
+
+.socials {
+    border: 1px solid #404040;
+    padding: 6px;
+    list-style: none;
+    background-color: #404040;
+}
+
+.socials a {
+    list-style: none;
+    color: rgb(170, 164, 164);
+}
+
+.socials a:hover {
+    color: white;
+}
+
+.content {
+    list-style: none;
+    font-size: 12px;
+    padding: 2px;
+    text-align: center;
+}
+
+.content2 {
+    list-style: none;
+    font-size: 12px;
+    padding: 2px;
+    text-align: center;
+}
+
+.content3 {
+    list-style: none;
+    font-size: 12px;
+    padding: 2px;
+    text-align: center;
+}
+
+
+.quick-links {
+    display: flex;
+    width: 560px;
+    height: 30px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quick-links ul {
+    display: flex;
+}
+
+.quick-links :hover {
+    color: white;
+}
+
+.quick-items {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-items a {
+    text-decoration: none;
+    padding: 9px;
+
+    font-size: 11px;
+    color: rgb(170, 164, 164);
+}
+
+.footer-bottom {
+    padding: 15px;
+    font-size: 12px;
+    font-style: bold;
+    color: white;
+    text-align: center;
+
+}
+
+
+.type1 {
+    width: 10%;
+    padding: 25px;
+    display: block;
+    margin: 0px auto;
+}
+
+.type2 img {
+    align-content: center;
+    height: 20%;
+    width: 10%;
+    padding: 15px;
+    display: block;
+    margin: 0px auto;
+}
+
+.type3 {
+    padding: 12px;
+    width: 22%;
+    display: block;
+    margin: 0px auto;
+}
+
+/* --------------------RESPONSIVE-------------------- */
+/* untuk tab fixnya 768 tapi ambil 800 */
+@media screen and (max-width: 1280px) {
+    .temp-a-bg{
+        width: 90%;
+    }
+
+    .segitiga{
+        top: 120px;
+    }
+    .mondstadt .segitiga {
+        top: 300px;
+    }
+    
+    .liyue .segitiga{
+        top: 300px;
+    }
+    
+    .inazuma .segitiga{
+        top: 300px;
+    }
+    
+    .sumeru .segitiga{
+        top: 300px;
+    }
+    .garisNama {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /* margin-top: 2%; */
+        margin-left: 35%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navBar .hamburger{
+        display: block;
+    }
+    .dropdownHamburger{
+        display: block;
+        left: 15rem;
+    }
+
+    .headerLogo{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        left: 43.5%;
+    }
+    .headerText{
+        display: none;
+    }
+    .splitLog{
+        display: none;
+    }
+    .splitDown{
+        display: none;
+    }
+    .droptext{
+        background-color: inherit;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        margin-left: 68%;
+    }
+    .dropdownHamburger a{
+        font-family: Tahoma,Arial, Helvetica, sans-serif;
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 56%;
+
+    }
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdownHamburger a:hover {
+        text-decoration-color: aqua;
+        text-shadow:
+            0 0 3px #00ffbf,
+            0 0 6px #36fbca,
+            0 0 10px #77fddc;
+    }
+
+    .dropdownHamburger {
+        overflow-y: scroll;
+    }
+
+    /* END NAVBAR */
+
+    /* MAPS */
+    .teyvat {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mapsDetailTeyvat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: solid red; */
+    }
+
+    .mapsDetailTeyvat h1 {
+        font-size: 65px;
+        font-weight: 400;
+        text-shadow: 0 0 0.17rem rgba(110, 159, 193, 0.24),
+            0 0 0.17rem rgba(110, 159, 193, 0.36);
+        /* border: solid blue; */
+    }
+
+    .temp-p p{
+        width: 100%;
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .temp-a-bg a{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .mondstadt .segitiga {
+        top: 185px;
+    }
+    
+    .liyue .segitiga{
+        top: 185px;
+    }
+    
+    .inazuma .segitiga{
+        top: 185px;
+    }
+    
+    .sumeru .segitiga{
+        top: 185px;
+    }
+    
+    .mondstadt {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        align-items: center;
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .liyue {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        align-items: center;
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .inazuma {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        align-items: center;
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .sumeru {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        align-items: center;
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .mapsDetail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logoMaps {
+        width: 90px;
+        margin-top: 150px;
+    }
+
+    .garisNama {
+        display: flex;
+        width: 66%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 2%;
+    }
+
+    .mapsName {
+        margin-top: 1%;
+        /* margin-right: 35%; */
+    }
+
+    .mapsDetail h1 {
+        font-weight: 400;
+        display: flex;
+        font-family: Tahoma, Helvetica, Arial, sans-serif;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+        /* overflow: hidden;  */
+    }
+
+    #garisKi {
+        /* display: none; */
+        float: left;
+        width: 60%;
+        /* margin-right: 30px; */
+    }
+
+    #garisKa {
+        /* display: none; */
+        float: right;
+        width: 60%;
+        transform: scale(-1, -1);
+        /* margin-left: 30px; */
+    }
+
+    .garisNama img {
+        margin-left: -266px;
+    }
+
+    .mapsDesc {
+        position: absolute;
+        color: white;
+        text-align: center;
+        margin-top: 300px;
+        line-height: 1.8;
+        font-size: 14px;
+        width: 80%;
+        text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    /* FOOTER */
+    .quick-links {
+        display: flex;
+        width: 100%;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .type1 {
+        width: 20%;
+        padding: 25px;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .type2 img {
+        align-content: center;
+        width: 20%;
+        padding: 15px;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .type3 {
+        padding: 12px;
+        width: 40%;
+        display: block;
+
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    /* navbar */
+    .navBar .hamburger{
+        display: block;
+    }
+    .dropdownHamburger{
+        display: block;
+        left: 3.5rem;
+    }
+
+    .headerLogo{
+        left: 10%;
+    }
+    .headerText{
+        display: none;
+    }
+    .droptext{
+        background-color: inherit;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        margin-left: 51.5%;
+    }
+    .dropdownHamburger{
+        width: 70%;
+    }
+    .dropdownHamburger a{
+        font-family: Tahoma,Arial, Helvetica, sans-serif;
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 39%;
+
+    }
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+
+    .dropdownHamburger a:hover {
+        text-decoration-color: aqua;
+        text-shadow:
+            0 0 3px #00ffbf,
+            0 0 6px #36fbca,
+            0 0 10px #77fddc;
+    }
+
+    .dropdownHamburger {
+        overflow-y: scroll;
+    }
+
+    /* MAPS */
+    .teyvat {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mapsDetailTeyvat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mapsDetailTeyvat h1 {
+        font-size: 35px;
+        font-weight: 400;
+        text-shadow: 0 0 0.17rem rgba(110, 159, 193, 0.24),
+            0 0 0.17rem rgba(110, 159, 193, 0.36);
+    }
+
+    .temp-a-bg {
+        margin-top: 55%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .temp-a-bg a {
+        color: white;
+        text-decoration: none;
+        background: url(/assets/checkIt.png) center no-repeat;
+    }
+
+    .temp-p p{
+        width: 100%;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .temp-a-bg a{
+        width: 83%;
+        font-size: 12px;
+    }
+
+    .mondstadt .segitiga {
+        top: 261px;
+    }
+    
+    .liyue .segitiga{
+        top: 261px;
+    }
+    
+    .inazuma .segitiga{
+        top: 261px;
+    }
+    
+    .sumeru .segitiga{
+        top: 261px;
+    }
+
+    .mondstadt {
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .liyue {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .inazuma {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .sumeru {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .mapsDetail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .logoMaps {
+        width: 90px;
+        margin-top: 25%;
+    }
+
+    .garisNama {
+        margin-top: 5%;
+        display: flex;
+        width: 30%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 70%;
+        margin-right: 0;
+    }
+
+    .mapsDetail h1 {
+        font-weight: 400;
+        display: flex;
+        font-family: Tahoma, Helvetica, Arial, sans-serif;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+        /* overflow: hidden;  */
+    }
+
+    .mapsName {
+        margin-top: 1%;
+    }
+
+    #garisKi {
+        /* display: none; */
+        float: left;
+        width: 100%;
+        /* margin-right: 30px; */
+    }
+
+    #garisKa {
+        /* display: none; */
+        float: right;
+        width: 100%;
+        transform: scale(-1, -1);
+        /* margin-left: 30px; */
+    }
+
+    .mapsDesc {
+        position: absolute;
+        color: white;
+        text-align: center;
+        margin-top: 250px;
+        line-height: 1.8;
+        font-size: 12px;
+        width: 70%;
+        text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .mapsDetailTeyvat p {
+        position: absolute;
+        color: white;
+        text-align: center;
+        line-height: 1.8;
+        width: 80%;
+        font-size: 12px;
+        text-shadow: 0 0 12px rgb(110 159 193/36%), 0 0 12px rgb(110 159 193/36%);
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+
+    /* FOOTER */
+    .quick-links {
+        display: flex;
+        width: 100%;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: -5%;
+    }
+
+    .type1 {
+        width: 50%;
+        padding: 25px;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .type2 img {
+        align-content: center;
+        width: 40%;
+        padding: 15px;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .type3 {
+        padding: 12px;
+        width: 60%;
+        display: block;
+        margin: 0px auto;
+    }
+}
